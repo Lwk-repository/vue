@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  {{getFull}}
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+
+  // let:变量，const:常量
+  const app = new Vue({
+    el: '#app', // 用于挂载要管理的元素
+    data: { // 定义数据
+      one: 'aaa',
+      two: 'bbb'
+    },
+    // 计算属性
+    computed: {
+      getFull: function (){
+        return this.one + this.two;
+      }
+    }
+  })
+</script>
+</body>
+</html>

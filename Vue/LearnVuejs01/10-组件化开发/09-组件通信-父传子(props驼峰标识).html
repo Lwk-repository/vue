@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--  v-bind不支持驼峰命名，用‘-’转化-->
+  <cpn :c-info="info" :child-my-message="message"></cpn>
+</div>
+
+<template id="cpn">
+<!--  定义模板时，外层必须要个根div包起来-->
+  <div>
+    <h2>{{cInfo}}</h2>
+    <h2>{{childMyMessage}}</h2>
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+
+  const cpn = {
+    template: '#cpn',
+    props: {
+      cInfo: {
+        type: Object,
+        default(){
+          return {}
+        }
+      },
+      childMyMessage: {
+        type: String,
+        default: ''
+      }
+    }
+  }
+
+  // let:变量，const:常量
+  const app = new Vue({
+    el: '#app', // 用于挂载要管理的元素
+    data: { // 定义数据
+      info: {
+        name: 'why',
+        age: 18,
+        height: 1.88,
+      },
+      message: 'aaaa'
+    },
+    components: {
+      cpn
+    }
+  })
+</script>
+</body>
+</html>

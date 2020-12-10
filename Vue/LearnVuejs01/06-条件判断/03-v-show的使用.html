@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <!--
+    v-if：当条件为false，包含v-if指令的元素，不会存在dom中
+    v-show：添加一个行内样式display：none
+  -->
+  <h2 v-if="message" id="aaa">{{message}}</h2>
+  <h2 v-show="message" id="bbb">{{message}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+
+  // let:变量，const:常量
+  const app = new Vue({
+    el: '#app', // 用于挂载要管理的元素
+    data: { // 定义数据
+      message: true
+    }
+  })
+</script>
+</body>
+</html>

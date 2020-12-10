@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--父组件模板-->
+<div id="app">
+<!--  不能写驼峰，默认把$emit的参数传过去-->
+  <cpn @item-click="cpnClick"></cpn>
+</div>
+
+<!--子组件模板-->
+<template id="cpn">
+  <div>
+    <button @click="btnClick(item)"
+            v-for="item in categories">
+      {{item.name}}
+    </button>
+  </div>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+  const cpn = {
+    template: '#cpn',
+    data(){
+      return {
+        categories: [
+          {id: 'aaa', name: '热门推荐'},
+          {id: 'bbb', name: '手机数码'},
+          {id: 'ccc', name: '家用家电'}
+        ]
+      }
+    },
+    methods: {
+      btnClick(item){
+        this.$emit('item-click',item);  // 发射出一个事件给父组件
+        console.log(item);
+      }
+    }
+  }
+
+  // let:变量，const:常量
+  const app = new Vue({
+    el: '#app', // 用于挂载要管理的元素
+    data: { // 定义数据
+      message: 'aaa'
+    },
+    components: {
+      cpn
+    },
+    methods: {
+      cpnClick(item){
+        console.log('click',item)
+      }
+    }
+  })
+</script>
+</body>
+</html>

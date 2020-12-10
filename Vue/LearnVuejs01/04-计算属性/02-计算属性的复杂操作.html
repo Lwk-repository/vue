@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  {{price}}
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+
+  // let:变量，const:常量
+  const app = new Vue({
+    el: '#app', // 用于挂载要管理的元素
+    data: { // 定义数据
+      books: [
+        {id: 110, name: 'unix编程艺术', price: 119},
+        {id: 111, name: '代码大全', price: 80},
+        {id: 112, name: '现代操作系统', price: 99},
+      ]
+    },
+    computed: {
+      price: function(){
+        let result = 0;
+        // es6语法
+        for(let book of this.books){
+          result += book.price;
+        }
+        return result;
+      }
+    }l
+  })
+</script>
+</body>
+</html>

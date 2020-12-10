@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    <span v-if="isUser">
+      <label for="username">用户账号</label>
+      <!--key作为一个标识，决定能不能复用-->
+      <input type="text" id="username" placeholder="用户账号" key="a">
+    </span>
+
+    <span v-else>
+      <label for="email">用户邮箱</label>
+      <input type="text" id="email" placeholder="用户邮箱" key="b">
+    </span>
+    <button @click="isUser = !isUser">切换类型</button>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+
+    // let:变量，const:常量
+    const app = new Vue({
+      el: '#app', // 用于挂载要管理的元素
+      data: { // 定义数据
+        isUser: true
+      }
+    })
+  </script>
+</body>
+</html>

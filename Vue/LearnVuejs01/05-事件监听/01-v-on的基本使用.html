@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    {{counter}}
+    <!--无参可以省略小括号-->
+    <button @click="increment">+</button>
+    <!--方法本身需要参数，vue会默认将浏览器生成的event事件对象作为第一个参数传入方法-->
+    <button @click="decrement">-</button>
+    <!--获取浏览器参数的event对象：$event-->
+    <button @click="btn1Click(123,$event)">-</button>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+
+    // let:变量，const:常量
+    const app = new Vue({
+      el: '#app', // 用于挂载要管理的元素
+      data: { // 定义数据
+        counter: 0
+      },
+      methods: {
+        increment(){
+          this.counter++;
+        },
+        decrement(event){
+          console.log(event);
+          this.counter--;
+        },
+        btn1Click(param,event){
+          console.log(param);
+          console.log(event);
+        }
+      }
+    })
+  </script>
+</body>
+</html>

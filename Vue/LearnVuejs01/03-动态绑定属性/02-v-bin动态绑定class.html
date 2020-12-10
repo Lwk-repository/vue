@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .active{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h2 :style="{color:'red',fontSize: finalSize}">{{message}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+
+  // let:变量，const:常量
+  const app = new Vue({
+    el: '#app', // 用于挂载要管理的元素
+    data: { // 定义数据
+      message: 'aaa',
+      finalSize: '100px'
+    }
+  })
+</script>
+</body>
+</html>
