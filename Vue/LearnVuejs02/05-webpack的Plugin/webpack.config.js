@@ -9,8 +9,6 @@ const path = require('path');
 const webpack = require('webpack');
 // 打包时生成页面，npm i --save-dev xxx
 const htmlWebpackPlugin = require('html-webpack-plugin');
-// 压缩JS文件，丑化js
-const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   // 版权
   plugins: [

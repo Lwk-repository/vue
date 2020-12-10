@@ -1,4 +1,4 @@
-# vuecli2test
+# runtimeonly
 
 > A Vue.js project
 
