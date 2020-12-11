@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+  // 问题：箭头函数中的this是如何查找的？
+  // 答案：向外层作用域中，一层曾查找this。
+  const obj = {
+    a(){
+      setTimeout(function (){
+        console.log(this); // window
+      });
+      setTimeout(()=>{
+        console.log(this); // obj对象
+      });
+    }
+  }
+</script>
+</body>
+</html>
