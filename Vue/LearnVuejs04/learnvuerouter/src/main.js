@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+import router from './router';  // 自动找index.js文件
 
 Vue.config.productionTip = false
 
