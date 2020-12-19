@@ -1,23 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <tab-bar/>
   </div>
 </template>
 
 <script>
+import TabBar from "./components/tabbar/TabBar";
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    TabBar
+  }
 }
 </script>
-
+<!--引入css文件-->
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import './assets/css/base.css';
 </style>
