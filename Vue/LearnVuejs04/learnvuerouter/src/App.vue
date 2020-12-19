@@ -19,7 +19,11 @@
     <button @click="userClick">用户</button>
     <button @click="profileClick">档案</button>
 
-   <router-view></router-view>
+<!--    将组件缓存，组件的created只会调用一次，销毁不会调用-->
+<!--    profile组件的name属性，多个用逗号隔开，不要加空格-->
+    <keep-alive exclude="Profile">
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 

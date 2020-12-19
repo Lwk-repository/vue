@@ -11,7 +11,13 @@ export default {
   name: "Profile",
   beforeCreate() {
     console.log(this.$route.query)
-  }
+  },
+  created(){
+    console.log('procreated');
+  },
+  destroyed() {
+    console.log('prodestroyed');
+  },
 }
 </script>
 
