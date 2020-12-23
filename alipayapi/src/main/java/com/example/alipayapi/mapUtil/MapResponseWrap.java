@@ -11,20 +11,20 @@ public class MapResponseWrap {
     private Integer code;
     private String message;
     private Object data;
-    private List<Map<String, String>> msg = new ArrayList<>();
-    private List<String> sMsg = new ArrayList<>();
+//    private List<Map<String, String>> msg = new ArrayList<>();
+    private List<String> msg = new ArrayList<>();
 
-    public static MapResponseWrap failMap(Integer code, List<Map<String, String>> list) {
+    /*public static MapResponseWrap failMap(Integer code, List<Map<String, String>> list) {
         MapResponseWrap view = new MapResponseWrap();
         view.setCode(code);
         view.setMsg(list);
         return view;
-    }
+    }*/
 
     public static MapResponseWrap failList(Integer code, List<String> list) {
         MapResponseWrap view = new MapResponseWrap();
         view.setCode(code);
-        view.setSMsg(list);
+        view.setMsg(list);
         return view;
     }
 }
