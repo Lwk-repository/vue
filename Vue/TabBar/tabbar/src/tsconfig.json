@@ -1,0 +1,355 @@
+{
+  "formId": "1ykryu55d4ao",
+  "formName": "测测表单",
+  "status": 1,
+  "title": "黑虎掏心",
+  "created": "2020-12-12T17:25:20.020+0000",
+  "total": 2,
+  "pkids": [
+    "258341876514557953",
+    "258340573965062144"
+  ],
+  "modules": [
+    {
+      "moduleId": "1ymry58xhdkw",
+      "moduleLib": "pull_down",
+      "moduleName": "下拉单选框",
+      "hidden": false,
+      "dataSize": 1,
+      "structs": [
+        {
+          "structId": 10005,
+          "moduleId": "1ymry58xhdkw",
+          "customType": 0,
+          "indexX": 0,
+          "required": true,
+          "defaultValue": "选选01",
+          "dataType": "nvarchar_1024",
+          "typeConverter": "NVARCHAR",
+          "length": 1024,
+          "ratio": 0,
+          "sorted": false,
+          "calc": false,
+          "structData": [
+            {
+              "id": 10000,
+              "structV": "选选01"
+            },
+            {
+              "id": 10001,
+              "structV": "选选02"
+            },
+            {
+              "id": 10002,
+              "structV": "选选03"
+            },
+            {
+              "id": 10003,
+              "structV": "选选04"
+            }
+          ],
+          "inputs": [
+            [],
+            []
+          ],
+          "validates": []
+        }
+      ],
+      "attrs": []
+    },
+    {
+      "moduleId": "1ymry76d5rls",
+      "moduleLib": "text_input",
+      "moduleName": "文本输入框",
+      "hidden": false,
+      "dataSize": 1,
+      "structs": [
+        {
+          "structId": 10004,
+          "moduleId": "1ymry76d5rls",
+          "customType": 0,
+          "indexX": 0,
+          "required": true,
+          "defaultValue": "I'm王二狗",
+          "dataType": "nvarchar_1024",
+          "typeConverter": "NVARCHAR",
+          "length": 1024,
+          "ratio": 0,
+          "sorted": false,
+          "calc": false,
+          "structData": [],
+          "inputs": [
+            [],
+            []
+          ],
+          "validates": []
+        }
+      ],
+      "attrs": []
+    },
+    {
+      "moduleId": "1ynqjzis1ds0",
+      "moduleLib": "matrix",
+      "moduleName": "矩阵",
+      "hidden": false,
+      "dataSize": 3,
+      "structs": [
+        {
+          "structId": 10007,
+          "moduleId": "1ynqjzis1ds0",
+          "customType": 0,
+          "indexX": 1,
+          "required": true,
+          "title": "姓名",
+          "dataType": "nvarchar_1024",
+          "typeConverter": "NVARCHAR",
+          "length": 1024,
+          "ratio": 0,
+          "sorted": false,
+          "calc": false,
+          "structData": [],
+          "inputs": [
+            [
+              {
+                "id": 10005,
+                "pkid": "258341876514557953",
+                "moduleId": "1ynqjzis1ds0",
+                "x": 1,
+                "y": -1,
+                "v": "王老五"
+              },
+              {
+                "id": 10007,
+                "pkid": "258341876514557953",
+                "moduleId": "1ynqjzis1ds0",
+                "x": 1,
+                "y": -2,
+                "v": "张麻子"
+              }
+            ],
+            [
+              {
+                "id": 10001,
+                "pkid": "258340573965062144",
+                "moduleId": "1ynqjzis1ds0",
+                "x": 1,
+                "y": -1,
+                "v": "王三炮"
+              },
+              {
+                "id": 10003,
+                "pkid": "258340573965062144",
+                "moduleId": "1ynqjzis1ds0",
+                "x": 1,
+                "y": -2,
+                "v": "李二牛"
+              }
+            ]
+          ],
+          "validates": []
+        },
+        {
+          "structId": 10008,
+          "moduleId": "1ynqjzis1ds0",
+          "customType": 0,
+          "indexX": 2,
+          "required": true,
+          "title": "职业",
+          "dataType": "nvarchar_1024",
+          "typeConverter": "NVARCHAR",
+          "length": 1024,
+          "ratio": 0,
+          "sorted": false,
+          "calc": false,
+          "structData": [],
+          "inputs": [
+            [
+              {
+                "id": 10006,
+                "pkid": "258341876514557953",
+                "moduleId": "1ynqjzis1ds0",
+                "x": 2,
+                "y": -1,
+                "v": "买糖"
+              },
+              {
+                "id": 10008,
+                "pkid": "258341876514557953",
+                "moduleId": "1ynqjzis1ds0",
+                "x": 2,
+                "y": -2,
+                "v": "打劫"
+              }
+            ],
+            [
+              {
+                "id": 10002,
+                "pkid": "258340573965062144",
+                "moduleId": "1ynqjzis1ds0",
+                "x": 2,
+                "y": -1,
+                "v": "炮手"
+              },
+              {
+                "id": 10004,
+                "pkid": "258340573965062144",
+                "moduleId": "1ynqjzis1ds0",
+                "x": 2,
+                "y": -2,
+                "v": "放牛"
+              }
+            ]
+          ],
+          "validates": []
+        },
+        {
+          "structId": 10009,
+          "moduleId": "1ynqjzis1ds0",
+          "customType": 0,
+          "indexX": -1,
+          "required": true,
+          "title": "王二狗",
+          "structData": [],
+          "validates": []
+        },
+        {
+          "structId": 10010,
+          "moduleId": "1ynqjzis1ds0",
+          "customType": 0,
+          "indexX": -2,
+          "required": true,
+          "title": "王二牛",
+          "structData": [],
+          "validates": []
+        }
+      ],
+      "attrs": []
+    },
+    {
+      "moduleId": "1ymry3anu7eo",
+      "moduleLib": "region_input",
+      "moduleName": "地区输入框",
+      "hidden": false,
+      "dataSize": 4,
+      "structs": [
+        {
+          "structId": 10000,
+          "moduleId": "1ymry3anu7eo",
+          "customType": 0,
+          "indexX": 0,
+          "required": true,
+          "defaultValue": "513001",
+          "dataType": "int",
+          "typeConverter": "INTEGER",
+          "length": 0,
+          "ratio": 0,
+          "sorted": false,
+          "calc": false,
+          "structData": [],
+          "inputs": [
+            [],
+            [
+              {
+                "id": 10000,
+                "pkid": "258340573965062144",
+                "moduleId": "1ymry3anu7eo",
+                "x": 0,
+                "y": 0,
+                "v": 513000
+              }
+            ]
+          ],
+          "validates": []
+        },
+        {
+          "structId": 10001,
+          "moduleId": "1ymry3anu7eo",
+          "customType": 0,
+          "indexX": 1,
+          "required": true,
+          "defaultValue": "513002",
+          "dataType": "int",
+          "typeConverter": "INTEGER",
+          "length": 0,
+          "ratio": 0,
+          "sorted": false,
+          "calc": false,
+          "structData": [],
+          "inputs": [
+            [],
+            [
+              {
+                "id": 10001,
+                "pkid": "258340573965062144",
+                "moduleId": "1ymry3anu7eo",
+                "x": 1,
+                "y": 0,
+                "v": 513001
+              }
+            ]
+          ],
+          "validates": []
+        },
+        {
+          "structId": 10002,
+          "moduleId": "1ymry3anu7eo",
+          "customType": 0,
+          "indexX": 2,
+          "required": true,
+          "defaultValue": "513002",
+          "dataType": "int",
+          "typeConverter": "INTEGER",
+          "length": 0,
+          "ratio": 0,
+          "sorted": false,
+          "calc": false,
+          "structData": [],
+          "inputs": [
+            [],
+            [
+              {
+                "id": 10002,
+                "pkid": "258340573965062144",
+                "moduleId": "1ymry3anu7eo",
+                "x": 2,
+                "y": 0,
+                "v": 513002
+              }
+            ]
+          ],
+          "validates": []
+        },
+        {
+          "structId": 10003,
+          "moduleId": "1ymry3anu7eo",
+          "customType": 0,
+          "indexX": 3,
+          "required": true,
+          "defaultValue": "成都市成华区",
+          "dataType": "nvarchar_1024",
+          "typeConverter": "NVARCHAR",
+          "length": 1024,
+          "ratio": 0,
+          "sorted": false,
+          "calc": false,
+          "structData": [],
+          "inputs": [
+            [],
+            [
+              {
+                "id": 10000,
+                "pkid": "258340573965062144",
+                "moduleId": "1ymry3anu7eo",
+                "x": 3,
+                "y": 0,
+                "v": "成都市武侯区吴琴南路"
+              }
+            ]
+          ],
+          "validates": []
+        }
+      ],
+      "attrs": []
+    }
+  ]
+}

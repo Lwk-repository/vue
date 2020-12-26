@@ -1,9 +1,0 @@
-/*安装loader才能打包到js中
-  npm install --save-dev css-loader
-  npm install style-loader --save-dev
-  配置webpack.config.js文件
-*/
-body{
-  /*background-color: #AFAEB2;*/
-  background: url("../img/test(1).png");
-}
