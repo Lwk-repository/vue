@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  // 优雅，链式调用resolve三种写法
+  new Promise((resolve, reject) => {
+    resolve('111');
+  }).then((data) => {
+    return new Promise((resolve) => {
+      resolve(data + 'aaa');
+    });
+  }).then((data) => {
+    return Promise.resolve(data + '222');
+  }).then((data) => {
+    return data + '333'; // 内部会调用Promise.resolve()进行包装
+  }).then((data) => {
+    console.log(data);
+  })
+
+  new Promise((resolve, reject) => {
+    resolve('111');
+  }).then((data) => {
+    // return Promise.reject('1112')
+    throw 'error message';  // reject 简写
+  }).then((data) => {
+    console.log(data);
+  }).catch(err => {
+    console.log(err);
+  })
+</script>
+</body>
+</html>

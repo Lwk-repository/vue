@@ -13,13 +13,32 @@
 
   // 参数 -> 函数(resolve, reject)
   // resolve, reject 本身又是函数
-  new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-      console.log('hello world');
-      console.log('hello world');
-      console.log('hello world');
-    },1000);
+  // 链式编程
+  // new Promise((resolve, reject) => {
+  //   resolve();  // 执行这个函数会去调then
+  // }).then(() => {
+  //   console.log('我那么多遗憾那么多悲伤');
+  //
+  //   new Promise((resolve, reject) => {
+  //     resolve();
+  //   }).then(() => {
+  //     console.log('我那么多遗憾那么多悲伤');
+  //   })
+  // })
+
+  // 什么情况下会用到promise：一般是异步操作
+  // 在执行传入的回调函数时，会传入两个参数，resolve，reject，本身又是函数
+  new Promise((resolve, reject) => {
+    // 成功时调用
+    // resolve('aaa');
+    // 失败时调用
+    reject('bbb');
+  }).then(data => {  // 接收resolve的参数
+    console.log(data);
+  }).catch(err => { // 执行reject会来到这
+    console.log(err);
   })
+
 </script>
 </body>
 </html>
